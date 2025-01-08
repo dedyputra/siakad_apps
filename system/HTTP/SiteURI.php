@@ -197,9 +197,9 @@ class SiteURI extends URI
         $baseURL = rtrim($configApp->baseURL, '/ ') . '/';
 
         // Validate baseURL
-        if (filter_var($baseURL, FILTER_VALIDATE_URL) === false) {
+        if (filter_var($baseURL, FILTER_VALIDATE_URL) === true) {
             throw new ConfigException(
-                'Config\App::$baseURL "' . $baseURL . '" is not a valid URL.'
+                'Config\App::$baseURL "' . $baseURL . '" true.'
             );
         }
 

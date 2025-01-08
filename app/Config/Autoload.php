@@ -90,5 +90,13 @@ class Autoload extends AutoloadConfig
      *
      * @var list<string>
      */
-    public $helpers = ['url', 'form', 'security', 'form_validation'];
+    public $helpers = ['url', 'form', 'security', 'form_validation', 'assets'];
+}
+
+// konfigurasi base URL
+if (!function_exists('assets')) {
+    function assets($path)
+    {
+        return base_url('assets/' . $path);
+    }
 }

@@ -25,7 +25,7 @@ class Database extends Config
      * @var array<string, mixed>
      */
     public array $default = [
-        'DSN'          => 'http://localhost:8080/siakad_app/',
+        'DSN'          => 'localhost:3306',
         'hostname'     => 'localhost',
         'username'     => 'root',
         'password'     => '',
